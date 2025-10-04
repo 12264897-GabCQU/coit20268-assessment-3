@@ -1,0 +1,80 @@
+/* Dashboard Specific Styles */
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    width: 100%;
+    max-width: 420px;
+    margin: var(--space-lg) auto;
+    align-items: center;
+}
+
+.cta-buttons .c-btn {
+    width: 100%;
+    max-width: 380px;
+    height: 70px;
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: italic;
+    padding: var(--space-lg);
+    background: var(--card-bg);
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+    box-shadow: var(--elev-2);
+    margin-top: auto;
+}
+
+.quote span {
+    background: var(--bg);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--header-bg);
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .cta-buttons .c-btn {
+        height: 60px;
+    }
+
+    .quote {
+        font-size: 0.9rem;
+    }
+}
+
+/* iPad / Tablet */
+@media (min-width: 768px) {
+    .cta-buttons {
+        flex-direction: row;
+        gap: var(--space-lg);
+        max-width: 900px;
+    }
+
+    .cta-buttons .c-btn {
+        flex: 1 1 0;
+        max-width: none;
+    }
+
+    .quote {
+        font-size: 1.15rem;
+        padding: var(--space-xl);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .cta-buttons {
+        gap: var(--space-2xl);
+        max-width: 1200px;
+    }
+
+    .quote {
+        font-size: 1.3rem;
+    }
+}

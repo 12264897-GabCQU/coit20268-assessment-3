@@ -80,16 +80,29 @@ body {
     font-size: 16px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
     margin: 0 0 var(--space-lg);
     color: var(--muted);
 }
 
-h1 { font-size: 2.4rem; } /* 40px */
-h2 { font-size: 2rem; }   /* 32px */
-h3 { font-size: 1.5rem; } /* 24px */
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
 
 p {
     margin: 0 0 var(--space-lg);
@@ -132,13 +145,6 @@ a:hover {
     padding-bottom: var(--space-xl);
 }
 
-.l-footer {
-    margin-top: auto;
-    padding: var(--space-xl);
-    text-align: center;
-    font-size: 14px;
-}
-
 .l-grid {
     display: grid;
     gap: var(--space-sm);
@@ -164,11 +170,13 @@ a:hover {
     color: var(--text-light);
     box-shadow: var(--elev-1);
 }
+
 .c-btn--primary:hover {
     background-color: var(--accent-strong);
     box-shadow: var(--elev-3);
     transform: translateY(-3px);
 }
+
 .c-btn--primary:active {
     transform: translateY(0);
     box-shadow: var(--elev-1);
@@ -179,6 +187,7 @@ a:hover {
     color: var(--muted);
     border-color: var(--header-bg);
 }
+
 .c-btn--secondary:hover {
     border-color: var(--accent);
 }
@@ -190,6 +199,7 @@ a:hover {
     padding: var(--space-lg);
     box-shadow: var(--elev-1);
 }
+
 .c-card__title {
     font-size: 20px;
 }
@@ -202,7 +212,7 @@ a:hover {
 .c-form__label {
     display: block;
     font-size: 14px;
-    font-weight: 500; /* Medium weight */
+    font-weight: 500;
     color: var(--muted);
     margin-bottom: var(--space-sm);
 }
@@ -216,207 +226,103 @@ a:hover {
     background-color: #fff;
     font-size: 1rem;
 }
+
 .c-form__input:focus {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
 }
+
 .c-form__input--error {
     border-color: var(--error);
 }
+
 .c-form__helper-text {
     font-size: 14px;
     color: var(--muted);
     margin-top: var(--space-xs);
 }
+
 .c-form__helper-text--error {
     color: var(--error);
 }
 
 /* Navigation */
 .c-nav {
-    background-color: var(--header-bg);
-    height: 70px;
-    display: flex;
-    align-items: center;
-    padding: 0 var(--space-lg);
-    position: relative;
-}
-
-.c-nav__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    position: relative;
+    height: 60px;
+    background-color: var(--header-bg);
+    padding: 0 var(--space-md);
 }
 
-.c-nav__left {
-    flex-shrink: 0;
-}
-
-.c-nav__title {
-    font-size: 1.3rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--muted);
-    text-decoration: none;
-}
-
-.c-nav__menu {
-    display: flex;
-    align-items: center;
-    gap: var(--space-lg);
-}
-
-.c-nav__center {
+.c-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     gap: var(--space-lg);
 }
 
-.c-nav__link {
-    font-size: 1rem;
+.c-nav a {
+    display: block;
+    padding: var(--space-md) 0;
+    min-height: 44px;
     font-weight: var(--font-weight-bold);
-    color: var(--muted);
-    text-decoration: none;
-    padding: var(--space-sm) 0;
     border-bottom: 2px solid transparent;
-    transition: color 160ms, border-color 160ms;
+    transition: color var(--transition-duration), border-color var(--transition-duration);
 }
 
-.c-nav__link:hover,
-.c-nav__link:focus {
+.c-nav a:hover,
+.c-nav a:focus {
     color: var(--accent-strong);
-    outline: none;
+    text-decoration: none;
 }
 
-.c-nav__link.is-active {
+.c-nav a.is-active {
+    color: var(--muted);
     border-bottom-color: var(--accent);
 }
 
-.c-nav__link--button {
-    background-color: var(--accent);
-    color: var(--text-light);
-    padding: 10px 18px;
-    border-radius: var(--radius-sm);
-    transition: background-color 160ms;
-}
-
-.c-nav__link--button:hover {
-    background-color: var(--accent-strong);
-    color: var(--text-light);
-}
-
-.c-nav__toggle-checkbox,
-.c-nav__toggle-label {
+.c-nav__toggle {
     display: none;
 }
 
-/* Tablet */
-@media (min-width: 768px) {
-    .c-nav__title {
-        font-size: 1.6rem;
-    }
-    .c-nav__menu {
-        gap: var(--space-xl);
-    }
-    .c-nav__center {
-        gap: var(--space-xl);
-    }
-    .c-nav__link {
-        font-size: 1.1rem;
-    }
-}
-
-/* Desktop */
-@media (min-width: 1025px) {
-    .c-nav__title {
-        font-size: 2rem;
-    }
-}
-
-/* Mobile */
 @media (max-width: 767px) {
-    .c-nav__title {
-        font-size: 1.3rem;
-    }
-
-    .c-nav__toggle-label {
-        display: block;
-        cursor: pointer;
-        z-index: 1001;
-    }
-
-    .c-nav__hamburger,
-    .c-nav__hamburger::before,
-    .c-nav__hamburger::after {
-        content: '';
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: var(--muted);
-        border-radius: 3px;
-        transition: transform 160ms, background-color 160ms;
-    }
-
-    .c-nav__hamburger::before {
-        transform: translateY(-8px);
-    }
-
-    .c-nav__hamburger::after {
-        transform: translateY(5px);
-    }
-
     .c-nav__menu {
         display: none;
         position: absolute;
-        top: 70px;
+        top: 60px;
         left: 0;
         right: 0;
-        background-color: var(--card-bg);
-        flex-direction: column;
-        align-items: stretch;
-        padding: var(--space-lg);
+        background: var(--card-bg);
         box-shadow: var(--elev-2);
-        z-index: 1000;
     }
 
-    .c-nav__center,
-    .c-nav__right {
+    .c-nav__menu.is-open {
+        display: block;
+    }
+
+    .c-nav ul {
         flex-direction: column;
-        width: 100%;
-        gap: 0;
+        gap: var(--space-lg);
+        padding: var(--space-lg);
     }
 
-    .c-nav__link {
-        font-size: 0.95rem;
+    .c-nav__toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
         padding: var(--space-md);
-        text-align: center;
-        border-bottom: 1px solid var(--header-bg);
-    }
-    
-    .c-nav__link.is-active {
-        border-bottom: 1px solid var(--accent);
-    }
-
-    .c-nav__link--button {
-        margin-top: var(--space-md);
-    }
-
-    .c-nav__toggle-checkbox:checked ~ .c-nav__menu {
-        display: flex;
-    }
-
-    .c-nav__toggle-checkbox:checked ~ .c-nav__toggle-label .c-nav__hamburger {
-        background-color: transparent;
-    }
-
-    .c-nav__toggle-checkbox:checked ~ .c-nav__toggle-label .c-nav__hamburger::before {
-        transform: rotate(45deg);
-    }
-
-    .c-nav__toggle-checkbox:checked ~ .c-nav__toggle-label .c-nav__hamburger::after {
-        transform: translateY(-3px) rotate(-45deg);
+        position: absolute;
+        right: var(--space-lg);
+        top: 20px;
+        z-index: 10;
     }
 }
-
 
 /* 5. Utilities */
 .u-visually-hidden {
@@ -441,6 +347,7 @@ a:hover {
     z-index: 100;
     transition: top 0.3s;
 }
+
 .u-skip-link:focus {
     top: 10px;
 }
@@ -454,16 +361,20 @@ a:hover {
         padding-left: var(--space-xl);
         padding-right: var(--space-xl);
     }
+
     .l-grid {
         gap: var(--space-lg);
     }
+
     .l-header h1 {
         font-size: 2.4rem;
     }
+
     .c-btn {
         padding: var(--space-lg);
         border-radius: 18px;
     }
+
     .c-card__title {
         font-size: 22px;
     }
@@ -476,16 +387,20 @@ a:hover {
         padding-left: var(--space-2xl);
         padding-right: var(--space-2xl);
     }
+
     .l-grid {
         gap: var(--space-xl);
     }
+
     .l-header h1 {
         font-size: 3.2rem;
     }
+
     .c-btn {
         padding: 20px var(--space-xl);
         border-radius: 22px;
     }
+
     .c-card__title {
         font-size: 24px;
     }
@@ -493,6 +408,7 @@ a:hover {
 
 /* 7. Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -501,6 +417,7 @@ a:hover {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+
     .c-btn--primary:hover {
         transform: none;
     }
@@ -512,9 +429,13 @@ a:hover {
         background-color: #fff;
         color: #000;
     }
-    .l-header, .c-nav, .l-footer, .c-btn {
+
+    .l-header,
+    .c-nav,
+    .c-btn {
         display: none;
     }
+
     .c-card {
         box-shadow: none;
         border: 1px solid #ccc;
