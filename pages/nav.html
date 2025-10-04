@@ -1,9 +1,26 @@
 <nav class="c-nav">
-    <a href="./dashboard.html" class="logo">Breezebound</a>
-    <ul>
-        <li><a href="check-in.html">Check-In</a></li>
-        <li><a href="vent-wall.html">Vent Wall</a></li>
-        <li><a href="find-a-buddy.html">Find a Buddy</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+    <div class="c-nav__left">
+        <a href="/index.html" class="c-nav__logo">Breezebound</a>
+    </div>
+
+    <input type="checkbox" id="nav-toggle" class="c-nav__toggle-input u-visually-hidden">
+    <label for="nav-toggle" class="c-nav__toggle-label">
+        <span class="u-visually-hidden">Open navigation menu</span>
+        <div class="c-nav__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </label>
+
+    <div class="c-nav__menu">
+        <ul class="c-nav__list">
+            <li><a href="/pages/checkin-entry.html" class="c-nav__link">Check-In</a></li>
+            <li><a href="/pages/vent-feed.html" class="c-nav__link">Vent Wall</a></li>
+            <li><a href="/pages/buddy-lookup.html" class="c-nav__link">Find a Buddy</a></li>
+        </ul>
+        <div class="c-nav__right">
+            <a href="#" class="c-btn--small c-btn">Contact Us</a>
+        </div>
+    </div>
 </nav>

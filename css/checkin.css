@@ -1,0 +1,29 @@
+.btn-emojis {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    margin-top: var(--space-xxl);
+}
+
+.btn-emoji {
+    font-size: 4rem;
+    padding: var(--space-xl);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.c-form__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.c-form__group textarea {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding-top: var(--space-md);
+}
