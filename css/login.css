@@ -1,0 +1,34 @@
+/*
+  Login Page Specific Styles
+  This file assumes style.css is already loaded.
+*/
+
+body.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg);
+}
+
+.c-login-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: var(--space-2xl);
+    box-shadow: var(--elev-1);
+    width: 100%;
+    max-width: 420px;
+}
+
+.c-login-card__title {
+    text-align: center;
+    font-size: 2rem; /* h2 size */
+    margin-bottom: var(--space-xl);
+    color: var(--muted);
+}
+
+/* The form elements inside will be styled by the global c-form styles in style.css */
+.c-login-card .c-btn {
+    width: 100%;
+}
+
