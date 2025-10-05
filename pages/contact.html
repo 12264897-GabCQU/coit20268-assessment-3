@@ -16,35 +16,33 @@
     </header>
     <main class="l-main">
         <form id="contact-form" class="contact-form c-card " novalidate>
-            <div id="error-summary" class="error-summary" aria-live="polite"></div>
-
             <fieldset class="contact-form__fieldset">
                 <div class="contact-form__grid">
                     <div class="c-form__group">
                         <label for="fullName" class="c-form__label">Full Name</label>
                         <input type="text" id="fullName" name="fullName" class="c-form__input" required
-                            aria-describedby="fullName-helper fullName-error" placeholder="Your full name.">
+                            aria-describedby="fullName-error" placeholder="Your full name.">
                         <div id="fullName-error" class="c-form__error"></div>
                     </div>
 
                     <div class="c-form__group">
                         <label for="email" class="c-form__label">Email Address</label>
                         <input type="email" id="email" name="email" class="c-form__input" required
-                            aria-describedby="email-helper email-error" placeholder="A valid email we can reply to.">
+                            aria-describedby="email-error" placeholder="A valid email we can reply to.">
                         <div id="email-error" class="c-form__error"></div>
                     </div>
 
                     <div class="c-form__group">
                         <label for="phone" class="c-form__label">Phone (Optional)</label>
-                        <input type="tel" id="phone" name="phone" class="c-form__input"
-                            aria-describedby="phone-helper phone-error" placeholder="e.g., 0412345678 or +61412345678">
+                        <input type="tel" id="phone" name="phone" class="c-form__input" aria-describedby="phone-error"
+                            placeholder="e.g., 0412345678 or +61412345678">
                         <div id="phone-error" class="c-form__error"></div>
                     </div>
 
                     <div class="c-form__group">
                         <label for="age" class="c-form__label">Age</label>
                         <input type="number" id="age" name="age" class="c-form__input" required
-                            aria-describedby="age-helper age-error" placeholder="e.g., 25">
+                            aria-describedby="age-error" placeholder="between 16 and 80" min="16" max="80">
                         <div id="age-error" class="c-form__error"></div>
                     </div>
                 </div>
@@ -54,8 +52,7 @@
                 <legend class="u-visually-hidden">Your Message</legend>
                 <div class="c-form__group">
                     <label for="topic" class="c-form__label">Topic</label>
-                    <select id="topic" name="topic" class="c-form__input" required
-                        aria-describedby="topic-helper topic-error">
+                    <select id="topic" name="topic" class="c-form__input" required aria-describedby="topic-error">
                         <option value="">Please select a topic...</option>
                         <option value="general">General Inquiry</option>
                         <option value="feedback">Website Feedback</option>
@@ -68,8 +65,7 @@
                 <div class="c-form__group">
                     <label for="message" class="c-form__label">Message</label>
                     <textarea id="message" name="message" class="c-form__input" rows="6" required
-                        aria-describedby="message-helper message-error"
-                        placeholder="Between 50 and 500 characters."></textarea>
+                        aria-describedby="message-error" placeholder="Between 50 and 500 characters."></textarea>
                     <div id="message-error" class="c-form__error"></div>
                 </div>
             </fieldset>
@@ -77,8 +73,7 @@
             <fieldset class="contact-form__fieldset">
                 <legend class="u-visually-hidden">Consent</legend>
                 <div class="c-form__group--checkbox">
-                    <input type="checkbox" id="consent" name="consent" required
-                        aria-describedby="consent-helper consent-error">
+                    <input type="checkbox" id="consent" name="consent" required aria-describedby="consent-error">
                     <label for="consent" class="c-form__label--checkbox">I agree to the privacy terms.</label>
                 </div>
                 <div id="consent-error" class="c-form__error"></div>

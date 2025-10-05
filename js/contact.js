@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
-    const errorSummary = document.getElementById('error-summary');
-
     const formContainer = document.getElementById('contact-form');
     const thankYouContainer = document.getElementById('thank-you-container');
 
@@ -105,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!validateField(field)) {
                 isFormValid = false;
                 const label = document.querySelector(`label[for=${field}]`).textContent;
-                errors.push({ field, message: document.getElementById(`${field}-error`).textContent });
+                errors.push({ field, label, message: document.getElementById(`${field}-error`).textContent });
             }
         });
 
@@ -114,11 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (firstErrorField) {
                 firstErrorField.focus();
             }
-            errorSummary.innerHTML = `<h3>Please correct the following errors:</h3><ul>${errors.map(err => `<li><a href="#${err.field}">${err.message}</a></li>`).join('')}</ul>`;
+            errorSummary.innerHTML = `<h3>Please correct the following errors:</h3><ul>${errors.map(err => `<li><a href="#${err.field}"><strong>${err.label}:</strong> ${err.message}</a></li>`).join('')}</ul>`;
             return;
         }
 
         /* UI BEHAVIOR */
+        submitBtn.disabled = true;
         setTimeout(() => {
             const formData = new FormData(form);
             const submission = {
@@ -137,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             /* VIEW SWAP */
             showThankYou(submission);
-
+            submitBtn.disabled = false;
         }, 400);
     });
 
