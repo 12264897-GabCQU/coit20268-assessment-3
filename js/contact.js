@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submit-btn');
     const formContainer = document.getElementById('contact-form');
     const thankYouContainer = document.getElementById('thank-you-container');
+    const errorSummary = document.getElementById('error-summary');
 
     const fields = ['fullName', 'email', 'phone', 'age', 'topic', 'message', 'consent'];
 
