@@ -137,6 +137,7 @@ a:hover {
     border-bottom-right-radius: var(--radius-lg);
     box-shadow: var(--elev-2);
     padding: var(--space-lg);
+    text-align: center;
 }
 
 .l-main {
@@ -298,25 +299,6 @@ a:hover {
     gap: var(--space-lg);
 }
 
-@media (min-width: 768px) {
-    .c-nav__list {
-        display: flex;
-        justify-content: center;
-        flex-grow: 1;
-    }
-
-    .c-nav__toggle-label {
-        display: none;
-    }
-
-    .c-nav__menu {
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-        justify-content: space-between;
-    }
-}
-
 .c-nav__link {
     color: var(--text-light);
     text-decoration: none;
@@ -415,6 +397,23 @@ a:hover {
     top: 10px;
 }
 
+.u-center-text {
+    text-align: center;
+    margin-top: var(--space-lg);
+}
+
+/* Anchor */
+.c-link {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.c-link:hover {
+    text-decoration: none;
+    color: var(--accent-strong);
+}
+
 /* 6. Media Queries */
 
 /* Tablet */
@@ -440,6 +439,23 @@ a:hover {
 
     .c-card__title {
         font-size: 22px;
+    }
+
+    .c-nav__list {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    .c-nav__toggle-label {
+        display: none;
+    }
+
+    .c-nav__menu {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: space-between;
     }
 }
 
