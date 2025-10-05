@@ -6,7 +6,7 @@
   Build Order Checklist:
   1. Tokens as custom properties in :root
   2. Base resets and typography rules
-  3. Layout containers and grids
+  3. Layout containers
   4. Components: nav, buttons, cards, forms
   5. Utilities: visually hidden, skip link
   6. Media queries for tablet, then desktop
@@ -121,7 +121,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* 3. Layout Containers & Grids */
+/* 3. Layout Containers */
 .l-container {
     width: 100%;
     margin-left: auto;
@@ -147,11 +147,6 @@ a:hover {
     flex-grow: 1;
     padding-top: var(--space-xl);
     padding-bottom: var(--space-xl);
-}
-
-.l-grid {
-    display: grid;
-    gap: var(--space-sm);
 }
 
 /* 4. Components */
@@ -221,10 +216,6 @@ a:hover {
     box-shadow: var(--elev-1);
 }
 
-.c-card__title {
-    font-size: 20px;
-}
-
 /* Forms */
 .c-form__group {
     margin-bottom: var(--space-lg);
@@ -253,20 +244,6 @@ a:hover {
     outline-offset: 2px;
 }
 
-.c-form__input--error {
-    border-color: var(--error);
-}
-
-.c-form__helper-text {
-    font-size: 14px;
-    color: var(--muted);
-    margin-top: var(--space-xs);
-}
-
-.c-form__helper-text--error {
-    color: var(--error);
-}
-
 /* Navigation */
 .c-nav {
     display: flex;
@@ -278,15 +255,9 @@ a:hover {
 }
 
 .c-nav__left,
-.c-nav__center,
 .c-nav__right {
     display: flex;
     align-items: center;
-}
-
-.c-nav__center {
-    flex-grow: 1;
-    justify-content: center;
 }
 
 .c-nav__logo {
@@ -387,21 +358,6 @@ a:hover {
     border: 0;
 }
 
-.u-skip-link {
-    position: absolute;
-    top: -100px;
-    left: 10px;
-    background: var(--accent-strong);
-    color: white;
-    padding: var(--space-md);
-    z-index: 100;
-    transition: top 0.3s;
-}
-
-.u-skip-link:focus {
-    top: 10px;
-}
-
 .u-center-text {
     text-align: center;
     margin-top: var(--space-lg);
@@ -429,10 +385,6 @@ a:hover {
         padding-right: var(--space-sm);
     }
 
-    .l-grid {
-        gap: var(--space-lg);
-    }
-
     .l-header h1 {
         font-size: 2.4rem;
     }
@@ -440,10 +392,6 @@ a:hover {
     .c-btn {
         padding: var(--space-lg);
         border-radius: 18px;
-    }
-
-    .c-card__title {
-        font-size: 22px;
     }
 
     .c-nav__list {
@@ -472,10 +420,6 @@ a:hover {
         padding-right: var(--space-2xl);
     }
 
-    .l-grid {
-        gap: var(--space-xl);
-    }
-
     .l-header h1 {
         font-size: 3.2rem;
     }
@@ -483,10 +427,6 @@ a:hover {
     .c-btn {
         padding: 20px var(--space-xl);
         border-radius: 22px;
-    }
-
-    .c-card__title {
-        font-size: 24px;
     }
 }
 

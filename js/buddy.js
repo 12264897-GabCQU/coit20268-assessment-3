@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         buddyList.innerHTML = ''; // Clear existing list
 
         if (data.length === 0) {
-            buddyList.innerHTML = '<p class="u-text-center">No buddies found for the selected criteria.</p>';
+            buddyList.innerHTML = '<p>No buddies found for the selected criteria.</p>';
             return;
         }
 
