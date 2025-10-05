@@ -199,10 +199,12 @@ a:hover {
 .c-btn--small {
     background-color: var(--accent);
     padding: var(--space-sm) var(--space-md) !important;
-    font-size: 0.9rem;
     color: var(--text-light);
     border-radius: 10px !important;
     margin-top: var(--space-sm);
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .c-btn--small:hover {
