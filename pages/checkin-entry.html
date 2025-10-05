@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <title>Breezebound | Checkin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/checkin.css">
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+    <header class="l-header">
+        <h1>How are you feeling today?</h1>
+    </header>
+    <main class="l-main">
+        <div class="btn-emojis">
+            <button class="btn-emoji" id="fear" title="Fear">😨</button>
+            <button class="btn-emoji" id="sadness" title="Sadness">😢</button>
+            <button class="btn-emoji" id="anger" title="Anger">😠</button>
+            <button class="btn-emoji" id="disgust" title="Disgust">🤢</button>
+            <button class="btn-emoji" id="enjoyment" title="Enjoyment">😊</button>
+        </div>
+        <div class="u-center-text">
+            <a href="checkin-history.html" class="c-link">View History</a>
+        </div>
+        <div class="c-form__group">
+            <textarea id="additional-comments" class="c-form__input" rows="5"
+                placeholder="What's on your mind?"></textarea>
+            <button class="c-btn c-btn--small">Submit</button>
+        </div>
+    </main>
+    <script src="../js/checkin.js"></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

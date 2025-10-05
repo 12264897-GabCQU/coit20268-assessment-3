@@ -1,0 +1,52 @@
+[
+    {
+        "date": "2025-10-07T10:00:00Z",
+        "activity": "walk",
+        "location": "Newstead"
+    },
+    {
+        "date": "2025-10-08T14:30:00Z",
+        "activity": "study",
+        "location": "New Farm"
+    },
+    {
+        "date": "2025-10-09T09:15:00Z",
+        "activity": "coffee",
+        "location": "Valley"
+    },
+    {
+        "date": "2025-10-10T18:00:00Z",
+        "activity": "walk",
+        "location": "Teneriffe"
+    },
+    {
+        "date": "2025-10-11T12:45:00Z",
+        "activity": "study",
+        "location": "Brisbane CBD"
+    },
+    {
+        "date": "2025-10-12T20:00:00Z",
+        "activity": "coffee",
+        "location": "Newstead"
+    },
+    {
+        "date": "2025-10-13T11:00:00Z",
+        "activity": "walk",
+        "location": "New Farm"
+    },
+    {
+        "date": "2025-10-14T16:20:00Z",
+        "activity": "study",
+        "location": "Valley"
+    },
+    {
+        "date": "2025-10-15T08:05:00Z",
+        "activity": "coffee",
+        "location": "Teneriffe"
+    },
+    {
+        "date": "2025-10-16T22:50:00Z",
+        "activity": "walk",
+        "location": "Brisbane CBD"
+    }
+]

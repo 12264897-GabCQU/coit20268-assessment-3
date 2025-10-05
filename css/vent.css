@@ -1,0 +1,139 @@
+/* Vent Feed */
+.vent-layout {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.vent-list-column {
+    flex: 1;
+    margin-right: var(--space-2xl);
+}
+
+.vent-detail-column {
+    flex: 2;
+}
+
+.vent-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vent-list-item {
+    border-radius: var(--border-radius-medium);
+    cursor: pointer;
+    align-items: center;
+    padding: var(--space-sm) 0;
+    border-bottom: 2px solid black;
+}
+
+.vent-list-item:hover {
+    background-color: var(--card-bg);
+}
+
+.vent-list-item--selected {
+    background-color: var(--card-bg);
+}
+
+.vent-list-item__title {
+    font-weight: var(--font-weight-bold);
+}
+
+.vent-list-item__date {
+    font-style: italic;
+}
+
+.vent-list-item__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.vent-list-item__note-preview {
+    margin: 0;
+    margin-top: var(--space-xs);
+}
+
+.vent-detail {
+    padding: var(--space-md);
+}
+
+.vent-detail h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+}
+
+.vent-detail__meta {
+    padding-left: var(--space-md);
+    margin-top: var(--space-sm);
+    font-weight: var(--font-weight-bold);
+    font-style: italic;
+}
+
+.vent-detail__note {
+    line-height: 1.5;
+    padding-left: var(--space-md);
+}
+
+.vent-btn-container {
+    text-align: center;
+    margin-bottom: var(--space-md);
+    font-weight: var(--font-weight-bold);
+    font-size: 2rem;
+    max-width: 400px;
+    margin: var(--space-sm) auto;
+}
+
+@media (max-width: 768px) {
+    .vent-layout {
+        flex-direction: column;
+    }
+
+    .vent-list-column {
+        flex: none;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: var(--space-md);
+        margin: 0 auto;
+    }
+
+    .vent-list {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: var(--space-md);
+    }
+
+    .vent-list-item {
+        flex: 0 0 180px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: none;
+    }
+
+    .vent-detail-column {
+        flex: none;
+        width: 100%;
+    }
+}
+
+/* Vent Compose */
+.c-form__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+    padding: 0 var(--space-lg);
+}
+
+.c-form__group textarea {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding-top: var(--space-md);
+}
+
+.c-form__group input {
+    width: 100%;
+    max-width: 600px;
+}
