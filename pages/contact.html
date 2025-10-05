@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breezebound | Contact Us</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body class="l-body">
+    <div id="nav-placeholder"></div>
+    <header class="l-header">
+        <h1>Contact Us</h1>
+    </header>
+    <main class="l-main">
+        <form id="contact-form" class="contact-form c-card " novalidate>
+            <div id="error-summary" class="error-summary" aria-live="polite"></div>
+
+            <fieldset class="contact-form__fieldset">
+                <div class="contact-form__grid">
+                    <div class="c-form__group">
+                        <label for="fullName" class="c-form__label">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" class="c-form__input" required
+                            aria-describedby="fullName-helper fullName-error" placeholder="Your full name.">
+                        <div id="fullName-error" class="c-form__error"></div>
+                    </div>
+
+                    <div class="c-form__group">
+                        <label for="email" class="c-form__label">Email Address</label>
+                        <input type="email" id="email" name="email" class="c-form__input" required
+                            aria-describedby="email-helper email-error" placeholder="A valid email we can reply to.">
+                        <div id="email-error" class="c-form__error"></div>
+                    </div>
+
+                    <div class="c-form__group">
+                        <label for="phone" class="c-form__label">Phone (Optional)</label>
+                        <input type="tel" id="phone" name="phone" class="c-form__input"
+                            aria-describedby="phone-helper phone-error" placeholder="e.g., 0412345678 or +61412345678">
+                        <div id="phone-error" class="c-form__error"></div>
+                    </div>
+
+                    <div class="c-form__group">
+                        <label for="age" class="c-form__label">Age</label>
+                        <input type="number" id="age" name="age" class="c-form__input" required
+                            aria-describedby="age-helper age-error" placeholder="e.g., 25">
+                        <div id="age-error" class="c-form__error"></div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="contact-form__fieldset">
+                <legend class="u-visually-hidden">Your Message</legend>
+                <div class="c-form__group">
+                    <label for="topic" class="c-form__label">Topic</label>
+                    <select id="topic" name="topic" class="c-form__input" required
+                        aria-describedby="topic-helper topic-error">
+                        <option value="">Please select a topic...</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="feedback">Website Feedback</option>
+                        <option value="support">Technical Support</option>
+                        <option value="partnership">Partnership</option>
+                    </select>
+                    <div id="topic-error" class="c-form__error"></div>
+                </div>
+
+                <div class="c-form__group">
+                    <label for="message" class="c-form__label">Message</label>
+                    <textarea id="message" name="message" class="c-form__input" rows="6" required
+                        aria-describedby="message-helper message-error"
+                        placeholder="Between 50 and 500 characters."></textarea>
+                    <div id="message-error" class="c-form__error"></div>
+                </div>
+            </fieldset>
+
+            <fieldset class="contact-form__fieldset">
+                <legend class="u-visually-hidden">Consent</legend>
+                <div class="c-form__group--checkbox">
+                    <input type="checkbox" id="consent" name="consent" required
+                        aria-describedby="consent-helper consent-error">
+                    <label for="consent" class="c-form__label--checkbox">I agree to the privacy terms.</label>
+                </div>
+                <div id="consent-error" class="c-form__error"></div>
+            </fieldset>
+
+            <div class="privacy-note">
+                <p><strong>Privacy Note:</strong> For this prototype, your contact information is only stored in
+                    your browser's session storage and is not sent to a server.</p>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submit-btn" class="c-btn c-btn--small">
+                    Send Message
+                </button>
+                <button type="button" id="clear-btn" class="c-btn c-btn--secondary-small">Clear Form</button>
+            </div>
+        </form>
+
+        <div id="thank-you-container" class="thank-you-panel c-card u-visually-hidden">
+            <h2>Thank You, <span id="user-first-name"></span>!</h2>
+            <p>Your message has been successfully "sent".</p>
+            <div class="summary">
+                <p><strong>Topic:</strong> <span id="summary-topic"></span></p>
+                <p><strong>Date:</strong> <span id="summary-date"></span></p>
+            </div>
+            <div class="form-actions">
+                <a href="../index.html" class="c-btn c-btn--secondary-small">Back to Home</a>
+                <button type="button" id="new-message-btn" class="c-btn c-btn--small">New Message</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+
+</html>

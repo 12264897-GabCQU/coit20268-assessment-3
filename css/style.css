@@ -191,6 +191,24 @@ a:hover {
     border-color: var(--accent);
 }
 
+.c-btn--secondary-small {
+    background-color: var(--card-bg);
+    color: var(--muted);
+    border-color: var(--header-bg);
+    border-radius: 10px !important;
+    padding: var(--space-sm) var(--space-md) !important;
+    border-radius: 10px !important;
+    margin-top: var(--space-sm);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.c-btn--secondary-small:hover {
+    border-color: var(--accent);
+    padding: var(--space-sm) var(--space-md) !important;
+}
+
 .c-btn--small {
     background-color: var(--accent);
     padding: var(--space-sm) var(--space-md) !important;
