@@ -50,92 +50,90 @@
     }
 }
 
-/* Check-in History */
-.history-layout {
+/* Check-in vent */
+.vent-layout {
     display: flex;
     gap: var(--space-lg);
 }
 
-.history-list-column {
+.vent-list-column {
     flex: 1;
     margin-right: var(--space-2xl);
 }
 
-.history-detail-column {
+.vent-detail-column {
     flex: 2;
 }
 
-.history-list {
+.vent-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.history-list-item {
+.vent-list-item {
     border-radius: var(--border-radius-medium);
     cursor: pointer;
-    display: flex;
     align-items: center;
-    gap: var(--space-md);
     padding: var(--space-sm) 0;
     border-bottom: 2px solid black;
 }
 
-.history-list-item:hover {
+.vent-list-item:hover {
     background-color: var(--card-bg);
 }
 
-.history-list-item--selected {
+.vent-list-item--selected {
     background-color: var(--card-bg);
 }
 
-.history-list-item__mood {
-    font-size: 2rem;
+.vent-list-item__title {
+    font-weight: var(--font-weight-bold);
 }
 
-.history-list-item__date {
+.vent-list-item__date {
     font-style: italic;
 }
 
-.history-list-item__text {
+.vent-list-item__text {
     display: flex;
     flex-direction: column;
 }
 
-.history-list-item__note-preview {
+.vent-list-item__note-preview {
     margin: 0;
     margin-top: var(--space-xs);
 }
 
-.history-detail {
+.vent-detail {
     padding: var(--space-md);
 }
 
-.history-detail h2 {
+.vent-detail h2 {
     font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: var(--space-sm);
 }
 
-.history-detail__meta {
+.vent-detail__meta {
     padding-left: var(--space-md);
     margin-top: var(--space-sm);
     font-weight: var(--font-weight-bold);
     font-style: italic;
 }
 
-.history-detail__note {
+.vent-detail__note {
 
     line-height: 1.5;
     padding-left: var(--space-md);
 }
 
 @media (max-width: 768px) {
-    .history-layout {
+    .vent-layout {
         flex-direction: column;
     }
 
-    .history-list-column {
+    .vent-list-column {
         flex: none;
         width: 100%;
         overflow-x: auto;
@@ -143,20 +141,20 @@
         margin: 0 auto;
     }
 
-    .history-list {
+    .vent-list {
         display: flex;
         flex-wrap: nowrap;
         gap: var(--space-md);
     }
 
-    .history-list-item {
+    .vent-list-item {
         flex: 0 0 180px;
         flex-direction: column;
         align-items: flex-start;
         border-bottom: none;
     }
 
-    .history-detail-column {
+    .vent-detail-column {
         flex: none;
         width: 100%;
     }

@@ -1,3 +1,7 @@
+/* Breezebound – COIT20268 Assessment 3
+   Author: Gabriel Patalinjug (12264897)
+   Purpose: Core style system for prototype */
+
 /* 
   Build Order Checklist:
   1. Tokens as custom properties in :root
@@ -118,13 +122,12 @@ a:hover {
 }
 
 /* 3. Layout Containers & Grids */
-.u-container {
+.l-container {
     width: 100%;
-    max-width: 420px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: var(--space-lg);
-    padding-right: var(--space-lg);
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
 }
 
 .l-header {
@@ -418,10 +421,10 @@ a:hover {
 
 /* Tablet */
 @media (min-width: 768px) {
-    .u-container {
+    .l-container {
         max-width: 900px;
-        padding-left: var(--space-xl);
-        padding-right: var(--space-xl);
+        padding-left: var(--space-sm);
+        padding-right: var(--space-sm);
     }
 
     .l-grid {
@@ -461,7 +464,7 @@ a:hover {
 
 /* Desktop */
 @media (min-width: 1025px) {
-    .u-container {
+    .l-container {
         max-width: 1200px;
         padding-left: var(--space-2xl);
         padding-right: var(--space-2xl);
